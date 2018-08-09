@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0946B051211B58FD00E1F5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B050211B58FD00E1F5EA /* AppDelegate.swift */; };
-		0946B053211B58FD00E1F5EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B052211B58FD00E1F5EA /* ViewController.swift */; };
 		0946B055211B58FE00E1F5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0946B054211B58FE00E1F5EA /* Assets.xcassets */; };
 		0946B058211B58FE00E1F5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0946B056211B58FE00E1F5EA /* Main.storyboard */; };
 		0946B064211B58FE00E1F5EA /* todayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B063211B58FE00E1F5EA /* todayTests.swift */; };
 		0946B06F211B58FE00E1F5EA /* todayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B06E211B58FE00E1F5EA /* todayUITests.swift */; };
+		0946B07D211B65A700E1F5EA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B07C211B65A700E1F5EA /* TodayViewController.swift */; };
+		0946B07F211B65E200E1F5EA /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B07E211B65E200E1F5EA /* FilesViewController.swift */; };
+		0946B081211B65F700E1F5EA /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B080211B65F700E1F5EA /* EditorViewController.swift */; };
+		09B98039211B9CAF00988790 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B98038211B9CAF00988790 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,17 +38,20 @@
 /* Begin PBXFileReference section */
 		0946B04D211B58FD00E1F5EA /* today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0946B050211B58FD00E1F5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0946B052211B58FD00E1F5EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0946B054211B58FE00E1F5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0946B057211B58FE00E1F5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0946B059211B58FE00E1F5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0946B05A211B58FE00E1F5EA /* today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = today.entitlements; sourceTree = "<group>"; };
+		0946B05A211B58FE00E1F5EA /* Routine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Routine.entitlements; sourceTree = "<group>"; };
 		0946B05F211B58FE00E1F5EA /* todayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0946B063211B58FE00E1F5EA /* todayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTests.swift; sourceTree = "<group>"; };
 		0946B065211B58FE00E1F5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0946B06A211B58FE00E1F5EA /* todayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0946B06E211B58FE00E1F5EA /* todayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayUITests.swift; sourceTree = "<group>"; };
 		0946B070211B58FE00E1F5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0946B07C211B65A700E1F5EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0946B07E211B65E200E1F5EA /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		0946B080211B65F700E1F5EA /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		09B98038211B9CAF00988790 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +82,9 @@
 		0946B044211B58FD00E1F5EA = {
 			isa = PBXGroup;
 			children = (
-				0946B04F211B58FD00E1F5EA /* today */,
-				0946B062211B58FE00E1F5EA /* todayTests */,
-				0946B06D211B58FE00E1F5EA /* todayUITests */,
+				0946B04F211B58FD00E1F5EA /* Routine */,
+				0946B062211B58FE00E1F5EA /* RoutineTests */,
+				0946B06D211B58FE00E1F5EA /* RoutineUITests */,
 				0946B04E211B58FD00E1F5EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,35 +99,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0946B04F211B58FD00E1F5EA /* today */ = {
+		0946B04F211B58FD00E1F5EA /* Routine */ = {
 			isa = PBXGroup;
 			children = (
 				0946B050211B58FD00E1F5EA /* AppDelegate.swift */,
-				0946B052211B58FD00E1F5EA /* ViewController.swift */,
 				0946B054211B58FE00E1F5EA /* Assets.xcassets */,
 				0946B056211B58FE00E1F5EA /* Main.storyboard */,
 				0946B059211B58FE00E1F5EA /* Info.plist */,
-				0946B05A211B58FE00E1F5EA /* today.entitlements */,
+				0946B05A211B58FE00E1F5EA /* Routine.entitlements */,
+				0946B07C211B65A700E1F5EA /* TodayViewController.swift */,
+				0946B07E211B65E200E1F5EA /* FilesViewController.swift */,
+				0946B080211B65F700E1F5EA /* EditorViewController.swift */,
+				09B98038211B9CAF00988790 /* Configuration.swift */,
 			);
-			path = today;
+			path = Routine;
 			sourceTree = "<group>";
 		};
-		0946B062211B58FE00E1F5EA /* todayTests */ = {
+		0946B062211B58FE00E1F5EA /* RoutineTests */ = {
 			isa = PBXGroup;
 			children = (
 				0946B063211B58FE00E1F5EA /* todayTests.swift */,
 				0946B065211B58FE00E1F5EA /* Info.plist */,
 			);
-			path = todayTests;
+			path = RoutineTests;
 			sourceTree = "<group>";
 		};
-		0946B06D211B58FE00E1F5EA /* todayUITests */ = {
+		0946B06D211B58FE00E1F5EA /* RoutineUITests */ = {
 			isa = PBXGroup;
 			children = (
 				0946B06E211B58FE00E1F5EA /* todayUITests.swift */,
 				0946B070211B58FE00E1F5EA /* Info.plist */,
 			);
-			path = todayUITests;
+			path = RoutineUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "today" */;
+			buildConfigurationList = 0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "Routine" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,8 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0946B053211B58FD00E1F5EA /* ViewController.swift in Sources */,
+				0946B07D211B65A700E1F5EA /* TodayViewController.swift in Sources */,
+				0946B07F211B65E200E1F5EA /* FilesViewController.swift in Sources */,
 				0946B051211B58FD00E1F5EA /* AppDelegate.swift in Sources */,
+				0946B081211B65F700E1F5EA /* EditorViewController.swift in Sources */,
+				09B98039211B9CAF00988790 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,15 +431,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = today/today.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Routine/Routine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = today/Info.plist;
+				INFOPLIST_FILE = Routine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.today;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.routine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -437,15 +449,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = today/today.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Routine/Routine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = today/Info.plist;
+				INFOPLIST_FILE = Routine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.today;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.routine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -467,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.todayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/today.app/Contents/MacOS/today";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Routine.temp_caseinsensitive_rename.app/Contents/MacOS/Routine.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -487,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.todayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/today.app/Contents/MacOS/today";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Routine.temp_caseinsensitive_rename.app/Contents/MacOS/Routine.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -532,7 +544,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "today" */ = {
+		0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "Routine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0946B071211B58FE00E1F5EA /* Debug */,
