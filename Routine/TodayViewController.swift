@@ -16,10 +16,6 @@ class TodayViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        let d = Configuration.getFile(name: "today-test")
-//        print(d)
-        
         if let files = left.viewController as? FilesViewController,
            let editor = right.viewController as? EditorViewController {
         

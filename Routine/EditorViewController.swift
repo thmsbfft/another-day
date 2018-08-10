@@ -24,7 +24,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
     func textDidChange(_ notification: Notification) {
         // Change depending on what is selected
         if let rtf = textView.rtf(from: NSMakeRange(0, textView.attributedString().length)) {
-            let selectedName = files.files[files.browser.selectedRow(inColumn: 0)]
+            let selectedName = files.files[files.browser.selectedRow]
             Configuration.writeFile(name: selectedName, content: rtf)
         }
     }
