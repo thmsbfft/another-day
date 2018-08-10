@@ -18,33 +18,45 @@ class PreferencesViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // show existing preferences
         
-        print(somedayCheckbox.state)
+        if prefs.someday == false {
+            somedayCheckbox.state = NSControl.StateValue.off
+            
+        }
+        else if prefs.someday == true {
+            somedayCheckbox.state = NSControl.StateValue.on
+        }
+        
+        folderPath.url = prefs.folder
     }
     
     func save() {
 
-        // Save someday state
-        if somedayCheckbox.state.rawValue == 0 {
+        // save someday state
+        if somedayCheckbox.state == NSControl.StateValue.off {
             prefs.someday = false
         }
-        else if somedayCheckbox.state.rawValue == 1 {
+        else if somedayCheckbox.state == NSControl.StateValue.on {
             prefs.someday = true
         }
+        
+        // save folder state
+        prefs.folder = folderPath.url!
 
         NotificationCenter.default.post(name: Notification.Name(rawValue: "preferences-changed"), object: nil)
     }
     
     @IBAction func somedayClicked(_ sender: NSButton) {
-        print("click")
-        print(somedayCheckbox.state.rawValue)
-        save()
+        print("Someday: ", somedayCheckbox.state.rawValue)
+        
+        self.save()
     }
     
     @IBAction func pickFolderClicked(_ sender: NSButton) {
         let openPanel = NSOpenPanel()
         openPanel.title = "Select a folder to store notes"
-        openPanel.message = "Videos you drop in the folder you select will be converted to animated gifs"
+        openPanel.message = "Select a folder to store notes"
         openPanel.showsResizeIndicator=true;
         openPanel.canChooseDirectories = true;
         openPanel.canChooseFiles = false;
@@ -53,9 +65,9 @@ class PreferencesViewController: NSViewController {
         
         openPanel.beginSheetModal(for:self.view.window!) { (response) in
             if response == .OK {
-                let selectedPath = openPanel.url!.path
-//                prefs.folder = selectedPath
+                print("New folder: ", openPanel.url!)
                 self.folderPath.url = openPanel.url!
+                self.save()
             }
         }
     }
