@@ -19,7 +19,6 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     override func viewDidLoad() {
         browser.delegate = self
         browser.headerView = nil
-
         browser.dataSource = self
     }
 

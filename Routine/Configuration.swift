@@ -9,11 +9,27 @@
 import Foundation
 
 class Configuration {
-    static let path = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").appendingPathComponent("Routine")
+    
+    static func getPath() -> URL {
+        return Preferences().folder
+    }
     
     static func getFile(name: String) -> NSAttributedString {
-        let fileURL = path.appendingPathComponent(name).appendingPathExtension("rtf")
-        // TODO: Check that file exists
+        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("rtf")
+        
+        // Check that file exists
+        let fileManager = FileManager.default
+        let newFileAttributedString = NSAttributedString(string: "~")
+        if !fileManager.fileExists(atPath: fileURL.absoluteString) {
+            print("File doesn't exist, creating a new one...")
+            do {
+                try fileManager.createFile(atPath: fileURL.absoluteString, contents: newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length)))
+            } catch let error as NSError {
+                print("Failed to create new file")
+                print(error)
+            }
+        }
+        
         var content: NSAttributedString!
         do {
             content = try NSAttributedString(url: fileURL, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
@@ -25,7 +41,7 @@ class Configuration {
     }
     
     static func writeFile(name: String, content: Data) {
-        let fileURL = path.appendingPathComponent(name).appendingPathExtension("rtf")
+        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("rtf")
         
         do {
             try content.write(to: fileURL)
