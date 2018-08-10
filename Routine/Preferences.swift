@@ -21,11 +21,11 @@ struct Preferences {
     
     var folder: URL {
         get {
-            let path = UserDefaults.standard.url?(forKey: "folder")
-            
-            if path != nil {
-                return path
-            }
+//            let path = UserDefaults.standard.url?(forKey: "folder")
+//            
+//            if path != nil {
+//                return path
+//            }
             
             // return a default path
             return FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").appendingPathComponent("Routine")

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-               BuildableName = "today.app"
-               BlueprintName = "today"
+               BuildableName = "Routine.app"
+               BlueprintName = "Routine"
                ReferencedContainer = "container:Routine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "today.app"
-            BlueprintName = "today"
+            BuildableName = "Routine.app"
+            BlueprintName = "Routine"
             ReferencedContainer = "container:Routine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "today.app"
-            BlueprintName = "today"
+            BuildableName = "Routine.app"
+            BlueprintName = "Routine"
             ReferencedContainer = "container:Routine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "today.app"
-            BlueprintName = "today"
+            BuildableName = "Routine.app"
+            BlueprintName = "Routine"
             ReferencedContainer = "container:Routine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

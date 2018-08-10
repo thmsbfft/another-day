@@ -20,5 +20,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    @IBAction func onYesterday(_ sender: Any) {
+        if let vc = NSApplication.shared.mainWindow?.contentViewController as? TodayViewController {
+            vc.files.browser.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+        }
+    }
+    
+    @IBAction func onToday(_ sender: Any) {
+        if let vc = NSApplication.shared.mainWindow?.contentViewController as? TodayViewController {
+            vc.files.browser.selectRowIndexes(IndexSet(integer: 1), byExtendingSelection: false)
+        }
+    }
+    
+    @IBAction func onTomorrow(_ sender: Any) {
+        if let vc = NSApplication.shared.mainWindow?.contentViewController as? TodayViewController {
+            vc.files.browser.selectRowIndexes(IndexSet(integer: 2), byExtendingSelection: false)
+        }
+    }
 }
 

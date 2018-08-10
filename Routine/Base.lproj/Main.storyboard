@@ -610,11 +610,19 @@
                                     <items>
                                         <menuItem title="Yesterday" keyEquivalent="1" id="snW-S8-Cw5">
                                             <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
+                                                <action selector="onYesterday:" target="Voe-Tx-rLC" id="D6Y-ef-Ey7"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Today" keyEquivalent="2" id="2Sq-hK-Gm8"/>
-                                        <menuItem title="Tomorrow" keyEquivalent="3" id="3g7-6G-1hd"/>
+                                        <menuItem title="Today" keyEquivalent="2" id="2Sq-hK-Gm8">
+                                            <connections>
+                                                <action selector="onToday:" target="Voe-Tx-rLC" id="IYr-YP-p6w"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Tomorrow" keyEquivalent="3" id="3g7-6G-1hd">
+                                            <connections>
+                                                <action selector="onTomorrow:" target="Voe-Tx-rLC" id="YXn-Og-KcB"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
@@ -704,7 +712,7 @@
         <!--Today View Controller-->
         <scene sceneID="4dz-JA-0i1">
             <objects>
-                <splitViewController id="2yw-UQ-Bqg" customClass="TodayViewController" customModule="today" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="2yw-UQ-Bqg" customClass="TodayViewController" customModule="Routine" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="255" behavior="contentList" id="alE-WK-mtE" userLabel="Left"/>
                         <splitViewItem id="6mG-YN-x7u" userLabel="Right"/>
@@ -731,7 +739,7 @@
         <!--Files View Controller-->
         <scene sceneID="ri4-h0-okI">
             <objects>
-                <viewController id="ijx-qF-5vT" customClass="FilesViewController" customModule="today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ijx-qF-5vT" customClass="FilesViewController" customModule="Routine" sceneMemberID="viewController">
                     <scrollView key="view" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="tJR-oG-MPj">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -807,7 +815,7 @@
         <!--Editor View Controller-->
         <scene sceneID="tXG-0D-mfX">
             <objects>
-                <viewController id="mxC-xZ-Iqt" customClass="EditorViewController" customModule="today" sceneMemberID="viewController">
+                <viewController id="mxC-xZ-Iqt" customClass="EditorViewController" customModule="Routine" sceneMemberID="viewController">
                     <view key="view" id="21y-A9-uln">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -881,7 +889,7 @@
         <!--Preferences View Controller-->
         <scene sceneID="Dup-X8-Rf6">
             <objects>
-                <viewController id="azp-GE-SeY" customClass="PreferencesViewController" customModule="today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="azp-GE-SeY" customClass="PreferencesViewController" customModule="Routine" sceneMemberID="viewController">
                     <view key="view" id="KjY-Mb-VJ6">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
