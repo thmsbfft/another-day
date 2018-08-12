@@ -14,12 +14,20 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     
     var editor:EditorViewController!
     
-    let files = ["yesterday", "today", "tomorrow"]
+    var prefs = Preferences()
+    var files = ["yesterday", "today", "tomorrow"]
     
     override func viewDidLoad() {
         browser.delegate = self
         browser.headerView = nil
         browser.dataSource = self
+        
+        updateFromPrefs()
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("preferences-changed"), object: nil, queue: nil) { (notification) in
+            self.updateFromPrefs()
+        }
+        
     }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -44,10 +52,29 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
 
             // Update the editor
             editor.update(withFile: file)
+            
+            // Update window title
+            self.parent?.view.window?.title = String(selectedName.uppercased().first!) + String(selectedName.dropFirst())
         }
         else {
             // Nothing is selected
             editor.disable()
         }
+    }
+    
+    func updateFromPrefs() {
+        let viewMenu = NSApplication.shared.mainMenu!.item(at: 4)!
+        if prefs.someday {
+            files.append("someday")
+            viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = true
+        }
+        else {
+            files = files.filter() {$0 != "someday" }
+            viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = false
+        }
+        if browser.selectedRow != -1 {
+            editor.disable()
+        }
+        browser.reloadData()
     }
 }

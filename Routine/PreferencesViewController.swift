@@ -72,4 +72,7 @@ class PreferencesViewController: NSViewController {
         }
     }
     
+    @IBAction func viewFolderClicked(_ sender: NSButton) {
+        NSWorkspace.shared.activateFileViewerSelecting([prefs.folder])
+    }
 }
