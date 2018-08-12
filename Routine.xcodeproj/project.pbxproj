@@ -16,6 +16,7 @@
 		095506CB211C8718007D5A9C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506CA211C8718007D5A9C /* PreferencesViewController.swift */; };
 		095506CD211D0F89007D5A9C /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506CC211D0F89007D5A9C /* Preferences.swift */; };
 		095506CF211FE54E007D5A9C /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */; };
+		095506D42120CCF1007D5A9C /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506D32120CCF1007D5A9C /* Cycle.swift */; };
 		09B98039211B9CAF00988790 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B98038211B9CAF00988790 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		095506CA211C8718007D5A9C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		095506CC211D0F89007D5A9C /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		095506D32120CCF1007D5A9C /* Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
 		09B98038211B9CAF00988790 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				095506CA211C8718007D5A9C /* PreferencesViewController.swift */,
 				095506CC211D0F89007D5A9C /* Preferences.swift */,
 				095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */,
+				095506D32120CCF1007D5A9C /* Cycle.swift */,
 			);
 			path = Routine;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				0946B07F211B65E200E1F5EA /* FilesViewController.swift in Sources */,
 				0946B051211B58FD00E1F5EA /* AppDelegate.swift in Sources */,
 				0946B081211B65F700E1F5EA /* EditorViewController.swift in Sources */,
+				095506D42120CCF1007D5A9C /* Cycle.swift in Sources */,
 				09B98039211B9CAF00988790 /* Configuration.swift in Sources */,
 				095506CF211FE54E007D5A9C /* PreferencesWindowController.swift in Sources */,
 				095506CB211C8718007D5A9C /* PreferencesViewController.swift in Sources */,
