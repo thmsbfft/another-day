@@ -833,7 +833,7 @@
         <!--Window Controller-->
         <scene sceneID="htW-eU-SBx">
             <objects>
-                <windowController id="bKA-PO-sMo" customClass="PreferencesWindowController" customModule="Routine" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="PreferencesController" id="bKA-PO-sMo" customClass="PreferencesWindowController" customModule="Routine" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" id="GPG-vk-UA2">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="673" y="457" width="416" height="214"/>
@@ -848,7 +848,7 @@
                 </windowController>
                 <customObject id="2FE-rJ-v4a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-651" y="235"/>
+            <point key="canvasLocation" x="-739" y="235"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="Dup-X8-Rf6">
@@ -925,7 +925,7 @@
                 </viewController>
                 <customObject id="A73-Ip-GdX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-651" y="750"/>
+            <point key="canvasLocation" x="-739" y="709"/>
         </scene>
     </scenes>
     <resources>

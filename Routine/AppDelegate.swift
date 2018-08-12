@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var preferencesController: PreferencesWindowController?
+    var preferencesController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -24,6 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func showPreferences(_ sender: Any) {
         if !(preferencesController != nil) {
+            preferencesController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PreferencesController")) as! PreferencesWindowController
+            preferencesController!.showWindow(sender)
+        }
+        
+        if (preferencesController != nil) {
             preferencesController!.showWindow(sender)
         }
     }
