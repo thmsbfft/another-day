@@ -19,13 +19,16 @@ class Configuration {
         
         // Check that file exists
         let fileManager = FileManager.default
-        let newFileAttributedString = NSAttributedString(string: "~")
-        if !fileManager.fileExists(atPath: fileURL.absoluteString) {
+        if !(fileManager.fileExists(atPath: fileURL.path)) {
             print("File doesn't exist, creating a new one...")
+            
+            let newFileAttributedString = NSAttributedString.init(string: "🌱")
+            let newFileAttributedData: Data! = newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length))
+            
+            // Save new file to disk
             do {
-                try fileManager.createFile(atPath: fileURL.absoluteString, contents: newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length)))
+                try newFileAttributedData.write(to: fileURL)
             } catch let error as NSError {
-                print("Failed to create new file")
                 print(error)
             }
         }
