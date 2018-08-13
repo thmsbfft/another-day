@@ -64,6 +64,7 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     func updateFromPrefs() {
         let viewMenu = NSApplication.shared.mainMenu!.item(at: 4)!
         if prefs.someday {
+            files = files.filter() {$0 != "someday" }
             files.append("someday")
             viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = true
         }

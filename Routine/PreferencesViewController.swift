@@ -48,8 +48,6 @@ class PreferencesViewController: NSViewController {
     }
     
     @IBAction func somedayClicked(_ sender: NSButton) {
-        print("Someday: ", somedayCheckbox.state.rawValue)
-        
         self.save()
     }
     

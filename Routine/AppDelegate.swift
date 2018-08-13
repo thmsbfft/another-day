@@ -12,13 +12,34 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var preferencesController: NSWindowController?
+    var mainWindowController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         Cycle.initCycleCheck()
+        
+        // Change application icon
+        // NSApplication.shared.applicationIconImage
+    }
+    
+    func applicationWillBecomeActive(_ notification: Notification) {
+        if Cycle.shouldDoCycle() {
+            Cycle.doCycle()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+    
+    @IBAction func showMainWindow(_ sender: Any) {
+        if !(mainWindowController != nil) {
+            mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "MainWindowController")) as! TodayWindowController
+            mainWindowController!.showWindow(sender)
+        }
+        
+        if (mainWindowController != nil) {
+            mainWindowController!.showWindow(sender)
+        }
     }
     
     @IBAction func showPreferences(_ sender: Any) {
