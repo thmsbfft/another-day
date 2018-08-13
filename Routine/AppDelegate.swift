@@ -14,8 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var preferencesController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        
+        Cycle.initCycleCheck()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -57,5 +56,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func openWebsite(_ sender: Any) {
+        if let url = URL(string: "https://thmsbfft.info") {
+            NSWorkspace.shared.open(url)
+        }
+    }
 }
 

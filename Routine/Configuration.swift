@@ -21,16 +21,7 @@ class Configuration {
         let fileManager = FileManager.default
         if !(fileManager.fileExists(atPath: fileURL.path)) {
             print("File doesn't exist, creating a new one...")
-            
-            let newFileAttributedString = NSAttributedString.init(string: "🌱")
-            let newFileAttributedData: Data! = newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length))
-            
-            // Save new file to disk
-            do {
-                try newFileAttributedData.write(to: fileURL)
-            } catch let error as NSError {
-                print(error)
-            }
+            createDefaultFile(atURL: fileURL)
         }
         
         var content: NSAttributedString!
@@ -53,4 +44,17 @@ class Configuration {
             print(error)
         }
     }
+    
+    static func createDefaultFile(atURL url: URL) {
+        let newFileAttributedString = NSAttributedString.init(string: "🌱")
+        let newFileAttributedData: Data! = newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length))
+        
+        // Save new file to disk
+        do {
+            try newFileAttributedData.write(to: url)
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
 }
