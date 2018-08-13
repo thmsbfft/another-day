@@ -6,7 +6,7 @@
 //  Copyright © 2018 thmsbfft. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
 class Configuration {
     
@@ -46,7 +46,11 @@ class Configuration {
     }
     
     static func createDefaultFile(atURL url: URL) {
-        let newFileAttributedString = NSAttributedString.init(string: "🌱")
+        let defaultAttributes: [NSAttributedStringKey : Any] = [
+            NSAttributedStringKey.font: NSFont(name: "Helvetica Neue", size: 14)!
+        ]
+        
+        let newFileAttributedString = NSAttributedString.init(string: " 🌱 ", attributes: defaultAttributes)
         let newFileAttributedData: Data! = newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length))
         
         // Save new file to disk

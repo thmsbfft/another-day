@@ -18,7 +18,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         super.viewDidLoad()
         
         textView.delegate = self
-        disable()
+//        disable()
     }
     
     func textDidChange(_ notification: Notification) {

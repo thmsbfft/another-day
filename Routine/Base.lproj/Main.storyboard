@@ -632,7 +632,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="today" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Routine" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,11 +664,11 @@
             <objects>
                 <splitViewController id="2yw-UQ-Bqg" customClass="TodayViewController" customModule="Routine" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem holdingPriority="255" behavior="contentList" id="alE-WK-mtE" userLabel="Left"/>
+                        <splitViewItem id="alE-WK-mtE" userLabel="Left"/>
                         <splitViewItem id="6mG-YN-x7u" userLabel="Right"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="E3o-bK-3OC">
-                        <rect key="frame" x="-158" y="0.0" width="608" height="300"/>
+                        <rect key="frame" x="-158" y="0.0" width="560" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <outlet property="delegate" destination="2yw-UQ-Bqg" id="mFJ-7j-scz"/>
@@ -684,7 +684,7 @@
                 </splitViewController>
                 <customObject id="I0v-AX-g9G" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="962"/>
+            <point key="canvasLocation" x="51" y="962"/>
         </scene>
         <!--Files View Controller-->
         <scene sceneID="ri4-h0-okI">
@@ -704,14 +704,14 @@
                                 </view>
                                 <color key="fillColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </box>
-                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="259" horizontalPageScroll="10" verticalLineScroll="259" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJR-oG-MPj">
+                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJR-oG-MPj">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="dY2-ub-rur">
-                                    <rect key="frame" x="0.0" y="23" width="160" height="277"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="257" rowSizeStyle="automatic" headerView="H0X-aU-UJN" viewBased="YES" id="TLA-3R-3bF">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="H0X-aU-UJN" viewBased="YES" id="TLA-3R-3bF">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="277"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -756,7 +756,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8bw-Qg-LLc">
-                                    <rect key="frame" x="0.0" y="284" width="160" height="16"/>
+                                    <rect key="frame" x="0.0" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="pOP-Zt-ce1">
@@ -891,7 +891,7 @@
                                             </connections>
                                         </button>
                                         <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8YG-XF-upJ">
-                                            <rect key="frame" x="454" y="7" width="14" height="15"/>
+                                            <rect key="frame" x="454" y="7" width="14" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="→" bezelStyle="inline" image="buttonCell:0qZ-Jg-D4Z:image" imagePosition="overlaps" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="0qZ-Jg-D4Z">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

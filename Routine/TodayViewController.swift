@@ -27,6 +27,8 @@ class TodayViewController: NSSplitViewController {
         
             files.editor = editor
             editor.files = files
+            
+            files.browser.selectRowIndexes([1], byExtendingSelection: false)
         }
     }
     
