@@ -28,8 +28,10 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             self.updateFromPrefs()
         }
         
-        NotificationCenter.default.addObserver(forName: Notification.Name("did-cycle"), object: nil, queue: nil) { (notification) in
-            self.editor.disable()
+        NotificationCenter.default.addObserver(forName: Notification.Name("cycle-begin"), object: nil, queue: nil) { (notification) in
+            // deselect before switching files
+            print("deselecting")
+            self.browser.deselectAll(self)
         }
     }
 

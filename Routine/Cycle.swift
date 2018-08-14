@@ -53,6 +53,7 @@ class Cycle {
     static func doCycle() {
         // update last-update with today's date
         UserDefaults.standard.set(Date(), forKey: "last-update")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "cycle-begin"), object: nil)
         
         print("Doing cycle")
         let fileManager = FileManager.default
@@ -85,8 +86,6 @@ class Cycle {
         // create a new tomorrow
         let tomorrowURL = folder.appendingPathComponent("tomorrow").appendingPathExtension("rtf")
         Configuration.createDefaultFile(atURL: tomorrowURL)
-        
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "did-cycle"), object: nil)
     }
     
     static func backupYesterday() {
