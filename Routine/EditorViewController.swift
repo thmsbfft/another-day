@@ -18,7 +18,6 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         super.viewDidLoad()
         
         textView.delegate = self
-//        disable()
     }
     
     func textDidChange(_ notification: Notification) {
@@ -33,6 +32,9 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         textView.string = ""
         textView.isEditable = false
         textView.isSelectable = false
+        
+        // update window title
+        self.parent?.view.window?.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
     }
     
     func enable() {

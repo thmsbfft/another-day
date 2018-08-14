@@ -22,13 +22,33 @@ struct Preferences {
     var folder: URL {
         get {
             let path = UserDefaults.standard.url(forKey: "folder")
-
+            let fileManager = FileManager.default
+            
+            // check if preference is set
             if path != nil {
-                return path!
+                var isDir: ObjCBool = false
+                if (fileManager.fileExists(atPath: path!.path, isDirectory: &isDir)) {
+                    // the folder exists
+                    // return the path
+                    return path!
+                }
+                // the folder doesn't exist (moved or trashed)
+                // we'll fallback on the default folder...
             }
             
-            // return a default path
-            return FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").appendingPathComponent("Routine")
+            // create a default folder
+            let defaultPath = fileManager.homeDirectoryForCurrentUser.appendingPathComponent("Documents").appendingPathComponent("Routine")
+            do {
+                try fileManager.createDirectory(atPath: defaultPath.path, withIntermediateDirectories: false)
+            } catch {
+                print(error)
+            }
+            
+            // set the default path
+            UserDefaults.standard.set(defaultPath, forKey: "folder")
+            
+            // return the default path
+            return defaultPath
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "folder")

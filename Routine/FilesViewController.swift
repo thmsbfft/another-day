@@ -27,6 +27,10 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
         NotificationCenter.default.addObserver(forName: Notification.Name("preferences-changed"), object: nil, queue: nil) { (notification) in
             self.updateFromPrefs()
         }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("did-cycle"), object: nil, queue: nil) { (notification) in
+            self.editor.disable()
+        }
     }
 
     func numberOfRows(in tableView: NSTableView) -> Int {

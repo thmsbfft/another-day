@@ -15,13 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainWindowController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        Cycle.initCycleCheck()
-        
         // Change application icon
         // NSApplication.shared.applicationIconImage
     }
     
     func applicationWillBecomeActive(_ notification: Notification) {
+        print("hello")
+        Cycle.initCycleCheck()
         if Cycle.shouldDoCycle() {
             Cycle.doCycle()
         }

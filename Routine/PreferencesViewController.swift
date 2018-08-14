@@ -19,7 +19,14 @@ class PreferencesViewController: NSViewController {
         super.viewDidLoad()
         
         // show existing preferences
-        
+        updateViewFromPreferences()
+    }
+    
+    override func viewWillAppear() {
+        updateViewFromPreferences()
+    }
+    
+    func updateViewFromPreferences() {
         if prefs.someday == false {
             somedayCheckbox.state = NSControl.StateValue.off
             
