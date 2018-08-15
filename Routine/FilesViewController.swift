@@ -46,11 +46,10 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 19
+        return 22
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        print(browser.selectedRow)
         if (browser.selectedRow != -1) {
             // Read selected file
             let selectedName = files[browser.selectedRow]
@@ -81,7 +80,7 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = false
         }
         browser.reloadData()
-        if selectedBefore == 3 {
+        if prefs.someday == false {
             editor.disable()
         }
         else {

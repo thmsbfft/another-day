@@ -51,28 +51,34 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
             case "Small":
                 fontSize = 14
             case "Medium":
-                fontSize = 20
+                fontSize = 18
             case "Large":
-                fontSize = 26
+                fontSize = 24
             default:
                 fontSize = 14
         }
         
+        
         // font family
         var font: NSFont
+        var lineSpacing: CGFloat
         switch prefs.font {
             case "System":
                 font = NSFont.systemFont(ofSize: fontSize)
+                lineSpacing = 2
             case "Serif":
-                font = NSFont(name: "Charter Roman", size: fontSize)!
+                font = NSFont(name: "Spectral Regular", size: fontSize*1.2)!
+                lineSpacing = -4
             case "Mono":
-                font = NSFont(name: "Monaco", size: fontSize)!
+                font = NSFont(name: "Space Mono", size: fontSize)!
+                lineSpacing = 1.8
             default:
                 font = NSFont.systemFont(ofSize: fontSize)
+                lineSpacing = 2
         }
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 2
+        paragraphStyle.lineSpacing = lineSpacing
         
         let attributes: [NSAttributedStringKey : Any] = [
             .font: font,
@@ -83,6 +89,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         
         textView.string = ""
         textView.textStorage?.append(attributedString)
+        
         enable()
     }
     

@@ -18,7 +18,8 @@
 		095506CF211FE54E007D5A9C /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */; };
 		095506D42120CCF1007D5A9C /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095506D32120CCF1007D5A9C /* Cycle.swift */; };
 		0958AFAF2122052B0029DC67 /* TodayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958AFAD2122052B0029DC67 /* TodayWindowController.swift */; };
-		0958AFB4212238410029DC67 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0958AFB3212238410029DC67 /* icon.icns */; };
+		0958AFBC212491910029DC67 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0958AFBB212491910029DC67 /* SpaceMono-Regular.ttf */; };
+		0958AFBE21249C9E0029DC67 /* Spectral-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0958AFBD21249C9E0029DC67 /* Spectral-Regular.ttf */; };
 		09B98039211B9CAF00988790 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B98038211B9CAF00988790 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,8 @@
 		095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		095506D32120CCF1007D5A9C /* Cycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
 		0958AFAD2122052B0029DC67 /* TodayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWindowController.swift; sourceTree = "<group>"; };
-		0958AFB3212238410029DC67 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../../../Dropbox/__PROJECTS/IDEA/YesterdayTodayTomorrow/icon.icns; sourceTree = "<group>"; };
+		0958AFBB212491910029DC67 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
+		0958AFBD21249C9E0029DC67 /* Spectral-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spectral-Regular.ttf"; sourceTree = "<group>"; };
 		09B98038211B9CAF00988790 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +73,7 @@
 		0946B04F211B58FD00E1F5EA /* Routine */ = {
 			isa = PBXGroup;
 			children = (
-				0958AFB3212238410029DC67 /* icon.icns */,
+				0958AFB5212484260029DC67 /* Fonts */,
 				0946B050211B58FD00E1F5EA /* AppDelegate.swift */,
 				0946B054211B58FE00E1F5EA /* Assets.xcassets */,
 				0946B056211B58FE00E1F5EA /* Main.storyboard */,
@@ -88,6 +90,15 @@
 				0958AFAD2122052B0029DC67 /* TodayWindowController.swift */,
 			);
 			path = Routine;
+			sourceTree = "<group>";
+		};
+		0958AFB5212484260029DC67 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0958AFBD21249C9E0029DC67 /* Spectral-Regular.ttf */,
+				0958AFBB212491910029DC67 /* SpaceMono-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0946B055211B58FE00E1F5EA /* Assets.xcassets in Resources */,
-				0958AFB4212238410029DC67 /* icon.icns in Resources */,
+				0958AFBE21249C9E0029DC67 /* Spectral-Regular.ttf in Resources */,
+				0958AFBC212491910029DC67 /* SpaceMono-Regular.ttf in Resources */,
 				0946B058211B58FE00E1F5EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

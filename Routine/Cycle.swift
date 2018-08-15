@@ -47,6 +47,11 @@ class Cycle {
         if currentDay > lastUpdateDay {
             return true
         }
+        else if lastUpdateDay > currentDay {
+            // this shouldn't happen but if it does
+            // reset lastUpdate to the currentDay
+            UserDefaults.standard.set(Date(), forKey: "last-update")
+        }
         return false
     }
     
