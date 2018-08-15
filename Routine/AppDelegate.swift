@@ -20,11 +20,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillBecomeActive(_ notification: Notification) {
-        print("hello")
         Cycle.initCycleCheck()
         if Cycle.shouldDoCycle() {
             Cycle.doCycle()
         }
+    }
+    
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if !flag {
+            if !(mainWindowController != nil) {
+                mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "MainWindowController")) as! TodayWindowController
+                mainWindowController!.showWindow(sender)
+            }
+            
+            if (mainWindowController != nil) {
+                mainWindowController!.showWindow(sender)
+            }
+        }
+        
+        return true
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

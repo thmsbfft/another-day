@@ -79,7 +79,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing
-        
+        /*
         let attributes: [NSAttributedStringKey : Any] = [
             .font: font,
             .paragraphStyle: paragraphStyle
@@ -88,7 +88,11 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         let attributedString = NSAttributedString.init(string: file, attributes: attributes)
         
         textView.string = ""
-        textView.textStorage?.append(attributedString)
+        textView.textStorage?.append(attributedString)*/
+        
+        textView.string = file
+        textView.font = font
+        textView.defaultParagraphStyle = paragraphStyle
         
         enable()
     }
