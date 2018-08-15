@@ -58,7 +58,6 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
                 fontSize = 14
         }
         
-        
         // font family
         var font: NSFont
         var lineSpacing: CGFloat
@@ -71,7 +70,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
                 lineSpacing = -4
             case "Mono":
                 font = NSFont(name: "Space Mono", size: fontSize)!
-                lineSpacing = 1.8
+                lineSpacing = 2.0
             default:
                 font = NSFont.systemFont(ofSize: fontSize)
                 lineSpacing = 2

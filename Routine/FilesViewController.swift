@@ -34,6 +34,10 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             self.browser.deselectAll(self)
         }
     }
+    
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        return CustomRowView()
+    }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
         return files.count
@@ -49,7 +53,12 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
         return 22
     }
     
+    func tableViewSelectionIsChanging(_ notification: Notification) {
+        browser.rowView(atRow: browser.selectedRow, makeIfNecessary: false)?.isEmphasized = false
+    }
+    
     func tableViewSelectionDidChange(_ notification: Notification) {
+        
         if (browser.selectedRow != -1) {
             // Read selected file
             let selectedName = files[browser.selectedRow]
@@ -90,4 +99,21 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             }
         }
     }
+}
+
+class CustomRowView: NSTableRowView {
+    
+    override var isEmphasized: Bool {
+        set {}
+        get {
+            return true
+        }
+    }
+    
+    override func drawSelection(in dirtyRect: NSRect) {
+//        NSColor.init(red: 225/255, green: 229/255, blue: 228/255, alpha: 1.0).setFill()
+        NSColor.black.setFill()
+        dirtyRect.fill()
+    }
+    
 }

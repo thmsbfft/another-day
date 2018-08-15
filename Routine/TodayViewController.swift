@@ -31,7 +31,4 @@ class TodayViewController: NSSplitViewController {
             files.browser.selectRowIndexes([1], byExtendingSelection: false)
         }
     }
-    
-    
-    
 }
