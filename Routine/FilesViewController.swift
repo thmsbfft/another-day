@@ -54,7 +54,9 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     }
     
     func tableViewSelectionIsChanging(_ notification: Notification) {
-        browser.rowView(atRow: browser.selectedRow, makeIfNecessary: false)?.isEmphasized = false
+        if browser.selectedRow > -1 {
+            browser.rowView(atRow: browser.selectedRow, makeIfNecessary: false)?.isEmphasized = false
+        }
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
