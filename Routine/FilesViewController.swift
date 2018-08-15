@@ -111,7 +111,6 @@ class CustomRowView: NSTableRowView {
     }
     
     override func drawSelection(in dirtyRect: NSRect) {
-//        NSColor.init(red: 225/255, green: 229/255, blue: 228/255, alpha: 1.0).setFill()
         NSColor.black.setFill()
         dirtyRect.fill()
     }

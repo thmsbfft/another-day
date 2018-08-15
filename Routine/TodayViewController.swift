@@ -19,6 +19,8 @@ class TodayViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        left.maximumThickness = 150
+        
         if let files = left.viewController as? FilesViewController,
            let editor = right.viewController as? EditorViewController {
             
