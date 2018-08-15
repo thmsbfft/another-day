@@ -10,6 +10,38 @@ import Foundation
 
 struct Preferences {
     
+    var font: String {
+        get {
+            let defaultFont = "System"
+            
+            if let setFont = UserDefaults.standard.string(forKey: "font") {
+                return setFont
+            }
+            
+            UserDefaults.standard.set(defaultFont, forKey: "font")
+            return defaultFont
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "font")
+        }
+    }
+    
+    var size: String {
+        get {
+            let defaultSize = "Small"
+            
+            if let setSize = UserDefaults.standard.string(forKey: "size") {
+                return setSize
+            }
+            
+            UserDefaults.standard.set(defaultSize, forKey: "size")
+            return defaultSize
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "size")
+        }
+    }
+    
     var someday: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "someday")

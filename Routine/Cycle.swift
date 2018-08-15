@@ -64,27 +64,27 @@ class Cycle {
         
         // yesterday is removed
         do {
-            try fileManager.removeItem(at: folder.appendingPathComponent("yesterday").appendingPathExtension("rtf"))
+            try fileManager.removeItem(at: folder.appendingPathComponent("yesterday").appendingPathExtension("txt"))
         } catch {
             print(error)
         }
         
         // today becomes yesterday
         do {
-            try fileManager.moveItem(at: folder.appendingPathComponent("today").appendingPathExtension("rtf"), to: folder.appendingPathComponent("yesterday").appendingPathExtension("rtf"))
+            try fileManager.moveItem(at: folder.appendingPathComponent("today").appendingPathExtension("txt"), to: folder.appendingPathComponent("yesterday").appendingPathExtension("txt"))
         } catch {
             print(error)
         }
         
         // tomorrow becomes today
         do {
-            try fileManager.moveItem(at: folder.appendingPathComponent("tomorrow").appendingPathExtension("rtf"), to: folder.appendingPathComponent("today").appendingPathExtension("rtf"))
+            try fileManager.moveItem(at: folder.appendingPathComponent("tomorrow").appendingPathExtension("txt"), to: folder.appendingPathComponent("today").appendingPathExtension("txt"))
         } catch {
             print(error)
         }
         
         // create a new tomorrow
-        let tomorrowURL = folder.appendingPathComponent("tomorrow").appendingPathExtension("rtf")
+        let tomorrowURL = folder.appendingPathComponent("tomorrow").appendingPathExtension("txt")
         Configuration.createDefaultFile(atURL: tomorrowURL)
     }
     
@@ -116,7 +116,7 @@ class Cycle {
         
         // yesterday is archived
         do {
-            try fileManager.moveItem(at: folder.appendingPathComponent("yesterday").appendingPathExtension("rtf"), to: folder.appendingPathComponent("before").appendingPathComponent(archiveDate).appendingPathExtension("rtf"))
+            try fileManager.moveItem(at: folder.appendingPathComponent("yesterday").appendingPathExtension("txt"), to: folder.appendingPathComponent("before").appendingPathComponent(archiveDate).appendingPathExtension("txt"))
         } catch {
             print(error)
         }

@@ -50,6 +50,7 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
+        print(browser.selectedRow)
         if (browser.selectedRow != -1) {
             // Read selected file
             let selectedName = files[browser.selectedRow]
@@ -69,6 +70,7 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     
     func updateFromPrefs() {
         let viewMenu = NSApplication.shared.mainMenu!.item(at: 4)!
+        let selectedBefore = browser.selectedRow
         if prefs.someday {
             files = files.filter() {$0 != "someday" }
             files.append("someday")
@@ -78,9 +80,12 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             files = files.filter() {$0 != "someday" }
             viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = false
         }
-        if browser.selectedRow != -1 {
+        browser.reloadData()
+        if selectedBefore == 3 {
             editor.disable()
         }
-        browser.reloadData()
+        else {
+            browser.selectRowIndexes([selectedBefore], byExtendingSelection: false)
+        }
     }
 }

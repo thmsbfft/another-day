@@ -12,8 +12,10 @@ class PreferencesViewController: NSViewController {
 
     var prefs = Preferences()
     
-    @IBOutlet var somedayCheckbox: NSButton!
-    @IBOutlet var folderPath: NSPathControl!
+    @IBOutlet var fontMenu: NSPopUpButton!
+    @IBOutlet var sizeMenu: NSPopUpButton!
+    @IBOutlet var folderMenu: NSPopUpButton!
+    @IBOutlet var somedaySegment: NSSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,42 +25,68 @@ class PreferencesViewController: NSViewController {
     }
     
     override func viewWillAppear() {
-        updateViewFromPreferences()
+//        updateViewFromPreferences()
     }
     
     func updateViewFromPreferences() {
+        
+        // font
+        fontMenu.selectItem(withTitle: prefs.font)
+        
+        // size
+        sizeMenu.selectItem(withTitle: prefs.size)
+        
+        // folder
+        folderMenu.item(at: 0)?.title = prefs.folder.pathComponents.last!
+        
+        // someday
         if prefs.someday == false {
-            somedayCheckbox.state = NSControl.StateValue.off
-            
+            somedaySegment.selectSegment(withTag: 1)
         }
         else if prefs.someday == true {
-            somedayCheckbox.state = NSControl.StateValue.on
+            somedaySegment.selectSegment(withTag: 0)
         }
         
-        folderPath.url = prefs.folder
     }
-    
+
     func save() {
 
-        // save someday state
-        if somedayCheckbox.state == NSControl.StateValue.off {
+        // font
+        prefs.font = fontMenu.selectedItem!.title
+        
+        // size
+        prefs.size = sizeMenu.selectedItem!.title
+        
+        // someday state
+        if somedaySegment.selectedSegment == 1 {
             prefs.someday = false
         }
-        else if somedayCheckbox.state == NSControl.StateValue.on {
+        else if somedaySegment.selectedSegment == 0 {
             prefs.someday = true
         }
-        
-        // save folder state
-        prefs.folder = folderPath.url!
 
         NotificationCenter.default.post(name: Notification.Name(rawValue: "preferences-changed"), object: nil)
     }
     
-    @IBAction func somedayClicked(_ sender: NSButton) {
-        self.save()
+    @IBAction func fontMenuChanged(_ sender: NSPopUpButton) {
+        save()
     }
     
-    @IBAction func pickFolderClicked(_ sender: NSButton) {
+    @IBAction func sizeMenuChanged(_ sender: NSPopUpButton) {
+        save()
+    }
+    
+    @IBAction func folderMenuChanged(_ sender: NSPopUpButton) {
+        if sender.selectedItem!.title == "Pick a folder..." {
+            pickFolderClicked()
+        }
+    }
+    
+    @IBAction func somedayChanged(_ sender: NSSegmentedControl) {
+        save()
+    }
+    
+    func pickFolderClicked() {
         let openPanel = NSOpenPanel()
         openPanel.title = "Select a folder to store notes"
         openPanel.message = "Select a folder to store notes"
@@ -67,16 +95,16 @@ class PreferencesViewController: NSViewController {
         openPanel.canChooseFiles = false;
         openPanel.allowsMultipleSelection = false;
         openPanel.canCreateDirectories = true;
-        
+
         openPanel.beginSheetModal(for:self.view.window!) { (response) in
             if response == .OK {
                 print("New folder: ", openPanel.url!)
-                self.folderPath.url = openPanel.url!
+                self.folderMenu.item(at: 0)?.title = self.prefs.folder.pathComponents.last!
                 self.save()
             }
         }
     }
-    
+
     @IBAction func viewFolderClicked(_ sender: NSButton) {
         NSWorkspace.shared.activateFileViewerSelecting([prefs.folder])
     }

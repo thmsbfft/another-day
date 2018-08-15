@@ -13,6 +13,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet var textView: NSTextView!
     
     var files:FilesViewController!
+    var prefs = Preferences()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,8 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
     func textDidChange(_ notification: Notification) {
         // Change depending on what is selected
         
-//        print(textView.string)
-        
-        if let rtf = textView.rtf(from: NSMakeRange(0, textView.attributedString().length)) {
-            let selectedName = files.files[files.browser.selectedRow]
-            Configuration.writeFile(name: selectedName, content: rtf)
-        }
+        let selectedName = files.files[files.browser.selectedRow]
+        Configuration.writeFile(name: selectedName, content: textView.string)
     }
     
     func disable() {
@@ -46,9 +43,46 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         textView.isSelectable = true
     }
     
-    func update(withFile file: NSAttributedString) {
+    func update(withFile file: String) {
+        
+        // font size
+        var fontSize: CGFloat = 14
+        switch prefs.size {
+            case "Small":
+                fontSize = 14
+            case "Medium":
+                fontSize = 20
+            case "Large":
+                fontSize = 26
+            default:
+                fontSize = 14
+        }
+        
+        // font family
+        var font: NSFont
+        switch prefs.font {
+            case "System":
+                font = NSFont.systemFont(ofSize: fontSize)
+            case "Serif":
+                font = NSFont(name: "Charter Roman", size: fontSize)!
+            case "Mono":
+                font = NSFont(name: "Monaco", size: fontSize)!
+            default:
+                font = NSFont.systemFont(ofSize: fontSize)
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 2
+        
+        let attributes: [NSAttributedStringKey : Any] = [
+            .font: font,
+            .paragraphStyle: paragraphStyle
+        ]
+        
+        let attributedString = NSAttributedString.init(string: file, attributes: attributes)
+        
         textView.string = ""
-        textView.textStorage?.append(file)
+        textView.textStorage?.append(attributedString)
         enable()
     }
     

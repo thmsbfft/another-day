@@ -14,8 +14,8 @@ class Configuration {
         return Preferences().folder
     }
     
-    static func getFile(name: String) -> NSAttributedString {
-        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("rtf")
+    static func getFile(name: String) -> String {
+        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("txt")
         
         // Check that file exists
         let fileManager = FileManager.default
@@ -24,9 +24,9 @@ class Configuration {
             createDefaultFile(atURL: fileURL)
         }
         
-        var content: NSAttributedString!
+        var content = ""
         do {
-            content = try NSAttributedString(url: fileURL, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
+            try content = String(contentsOf: fileURL, encoding: .utf8)
         } catch let error as NSError {
             print("Failed to retrieve file")
             print(error)
@@ -34,28 +34,23 @@ class Configuration {
         return content
     }
     
-    static func writeFile(name: String, content: Data) {
-        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("rtf")
+    static func writeFile(name: String, content: String) {
+        let fileURL = getPath().appendingPathComponent(name).appendingPathExtension("txt")
         
         do {
-            try content.write(to: fileURL)
+            try content.write(to: fileURL, atomically: false, encoding: .utf8)
         } catch let error as NSError {
             print("Failed")
             print(error)
         }
     }
     
-    static func createDefaultFile(atURL url: URL) {
-        let defaultAttributes: [NSAttributedStringKey : Any] = [
-            NSAttributedStringKey.font: NSFont(name: "Helvetica Neue", size: 14)!
-        ]
-        
-        let newFileAttributedString = NSAttributedString.init(string: " 🌱 ", attributes: defaultAttributes)
-        let newFileAttributedData: Data! = newFileAttributedString.rtf(from: NSMakeRange(0, newFileAttributedString.length))
+    static func createDefaultFile(atURL url: URL) {      
+        let newFile = " 🌱 "
         
         // Save new file to disk
         do {
-            try newFileAttributedData.write(to: url)
+            try newFile.write(to: url, atomically: false, encoding: .utf8)
         } catch let error as NSError {
             print(error)
         }
