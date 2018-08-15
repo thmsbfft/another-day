@@ -68,7 +68,7 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
     }
     
     func updateFromPrefs() {
-        let viewMenu = NSApplication.shared.mainMenu!.item(at: 4)!
+        let viewMenu = NSApplication.shared.mainMenu!.item(at: 3)!
         let selectedBefore = browser.selectedRow
         if prefs.someday {
             files = files.filter() {$0 != "someday" }
@@ -80,11 +80,14 @@ class FilesViewController: NSViewController, NSTableViewDelegate, NSTableViewDat
             viewMenu.submenu?.item(withTitle: "Someday")?.isEnabled = false
         }
         browser.reloadData()
-        if prefs.someday == false {
-            editor.disable()
-        }
-        else {
-            browser.selectRowIndexes([selectedBefore], byExtendingSelection: false)
+        
+        if editor != nil {
+            if prefs.someday == false && selectedBefore == 3 {
+                editor.disable()
+            }
+            else {
+                browser.selectRowIndexes([selectedBefore], byExtendingSelection: false)
+            }
         }
     }
 }
