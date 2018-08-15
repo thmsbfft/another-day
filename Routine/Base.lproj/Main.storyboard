@@ -403,7 +403,7 @@
                 <splitViewController id="2yw-UQ-Bqg" customClass="TodayViewController" customModule="Routine" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="alE-WK-mtE" userLabel="Left"/>
-                        <splitViewItem id="6mG-YN-x7u" userLabel="Right"/>
+                        <splitViewItem holdingPriority="1" id="6mG-YN-x7u" userLabel="Right"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="E3o-bK-3OC">
                         <rect key="frame" x="-158" y="0.0" width="560" height="300"/>
