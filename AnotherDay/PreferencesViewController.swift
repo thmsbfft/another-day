@@ -99,8 +99,8 @@ class PreferencesViewController: NSViewController {
         openPanel.beginSheetModal(for:self.view.window!) { (response) in
             if response == .OK {
                 print("New folder: ", openPanel.url!)
+                self.prefs.folder = openPanel.url!
                 self.folderMenu.item(at: 0)?.title = self.prefs.folder.pathComponents.last!
-                self.save()
             }
         }
     }

@@ -24,12 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0946B04D211B58FD00E1F5EA /* Routine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0946B04D211B58FD00E1F5EA /* Another Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Another Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0946B050211B58FD00E1F5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0946B054211B58FE00E1F5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0946B057211B58FE00E1F5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0946B059211B58FE00E1F5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0946B05A211B58FE00E1F5EA /* Routine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Routine.entitlements; sourceTree = "<group>"; };
+		0946B05A211B58FE00E1F5EA /* AnotherDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnotherDay.entitlements; sourceTree = "<group>"; };
 		0946B07C211B65A700E1F5EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		0946B07E211B65E200E1F5EA /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		0946B080211B65F700E1F5EA /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		0946B044211B58FD00E1F5EA = {
 			isa = PBXGroup;
 			children = (
-				0946B04F211B58FD00E1F5EA /* Routine */,
+				0946B04F211B58FD00E1F5EA /* Another Day */,
 				0946B04E211B58FD00E1F5EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +65,12 @@
 		0946B04E211B58FD00E1F5EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0946B04D211B58FD00E1F5EA /* Routine.app */,
+				0946B04D211B58FD00E1F5EA /* Another Day.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0946B04F211B58FD00E1F5EA /* Routine */ = {
+		0946B04F211B58FD00E1F5EA /* Another Day */ = {
 			isa = PBXGroup;
 			children = (
 				0958AFB5212484260029DC67 /* Fonts */,
@@ -78,7 +78,7 @@
 				0946B054211B58FE00E1F5EA /* Assets.xcassets */,
 				0946B056211B58FE00E1F5EA /* Main.storyboard */,
 				0946B059211B58FE00E1F5EA /* Info.plist */,
-				0946B05A211B58FE00E1F5EA /* Routine.entitlements */,
+				0946B05A211B58FE00E1F5EA /* AnotherDay.entitlements */,
 				0946B07C211B65A700E1F5EA /* TodayViewController.swift */,
 				0946B07E211B65E200E1F5EA /* FilesViewController.swift */,
 				0946B080211B65F700E1F5EA /* EditorViewController.swift */,
@@ -89,7 +89,8 @@
 				095506D32120CCF1007D5A9C /* Cycle.swift */,
 				0958AFAD2122052B0029DC67 /* TodayWindowController.swift */,
 			);
-			path = Routine;
+			name = "Another Day";
+			path = AnotherDay;
 			sourceTree = "<group>";
 		};
 		0958AFB5212484260029DC67 /* Fonts */ = {
@@ -104,9 +105,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0946B04C211B58FD00E1F5EA /* Routine */ = {
+		0946B04C211B58FD00E1F5EA /* Another Day */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0946B073211B58FE00E1F5EA /* Build configuration list for PBXNativeTarget "Routine" */;
+			buildConfigurationList = 0946B073211B58FE00E1F5EA /* Build configuration list for PBXNativeTarget "Another Day" */;
 			buildPhases = (
 				0946B049211B58FD00E1F5EA /* Sources */,
 				0946B04A211B58FD00E1F5EA /* Frameworks */,
@@ -116,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = Routine;
+			name = "Another Day";
 			productName = today;
-			productReference = 0946B04D211B58FD00E1F5EA /* Routine.app */;
+			productReference = 0946B04D211B58FD00E1F5EA /* Another Day.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "Routine" */;
+			buildConfigurationList = 0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "AnotherDay" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -149,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0946B04C211B58FD00E1F5EA /* Routine */,
+				0946B04C211B58FD00E1F5EA /* Another Day */,
 			);
 		};
 /* End PBXProject section */
@@ -317,15 +318,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Routine/Routine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AnotherDay/AnotherDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Routine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnotherDay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.routine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.anotherday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -335,15 +336,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Routine/Routine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AnotherDay/AnotherDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Routine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnotherDay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.routine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.anotherday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -352,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "Routine" */ = {
+		0946B048211B58FD00E1F5EA /* Build configuration list for PBXProject "AnotherDay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0946B071211B58FE00E1F5EA /* Debug */,
@@ -361,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0946B073211B58FE00E1F5EA /* Build configuration list for PBXNativeTarget "Routine" */ = {
+		0946B073211B58FE00E1F5EA /* Build configuration list for PBXNativeTarget "Another Day" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0946B074211B58FE00E1F5EA /* Debug */,

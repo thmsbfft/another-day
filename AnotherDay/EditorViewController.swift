@@ -20,6 +20,7 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         
         textView.delegate = self
         textView.textContainerInset = NSMakeSize(20, 20)
+//        textView.textContainer?.layoutManager
     }
     
     func textDidChange(_ notification: Notification) {

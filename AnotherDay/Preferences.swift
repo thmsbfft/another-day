@@ -69,7 +69,7 @@ struct Preferences {
             }
             
             // create a default folder
-            let defaultPath = fileManager.homeDirectoryForCurrentUser.appendingPathComponent("Documents").appendingPathComponent("Routine")
+            let defaultPath = fileManager.homeDirectoryForCurrentUser.appendingPathComponent("Documents").appendingPathComponent("Another Day")
             do {
                 try fileManager.createDirectory(atPath: defaultPath.path, withIntermediateDirectories: false)
             } catch {

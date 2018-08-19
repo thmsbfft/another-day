@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-               BuildableName = "Routine.app"
-               BlueprintName = "Routine"
-               ReferencedContainer = "container:Routine.xcodeproj">
+               BuildableName = "Another Day.app"
+               BlueprintName = "Another Day"
+               ReferencedContainer = "container:Another Day.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0946B05E211B58FE00E1F5EA"
-               BuildableName = "todayTests.xctest"
-               BlueprintName = "todayTests"
-               ReferencedContainer = "container:Routine.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0946B069211B58FE00E1F5EA"
-               BuildableName = "todayUITests.xctest"
-               BlueprintName = "todayUITests"
-               ReferencedContainer = "container:Routine.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "Routine.app"
-            BlueprintName = "Routine"
-            ReferencedContainer = "container:Routine.xcodeproj">
+            BuildableName = "Another Day.app"
+            BlueprintName = "Another Day"
+            ReferencedContainer = "container:Another Day.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "Routine.app"
-            BlueprintName = "Routine"
-            ReferencedContainer = "container:Routine.xcodeproj">
+            BuildableName = "Another Day.app"
+            BlueprintName = "Another Day"
+            ReferencedContainer = "container:Another Day.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0946B04C211B58FD00E1F5EA"
-            BuildableName = "Routine.app"
-            BlueprintName = "Routine"
-            ReferencedContainer = "container:Routine.xcodeproj">
+            BuildableName = "Another Day.app"
+            BlueprintName = "Another Day"
+            ReferencedContainer = "container:Another Day.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
