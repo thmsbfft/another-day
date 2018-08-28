@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class EditorViewController: NSViewController, NSTextViewDelegate {
+class EditorViewController: NSViewController, NSTextViewDelegate, NSTextStorageDelegate {
     
     @IBOutlet var textView: NSTextView!
     
@@ -20,14 +20,15 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         
         textView.delegate = self
         textView.textContainerInset = NSMakeSize(20, 20)
-//        textView.textContainer?.layoutManager
     }
     
     func textDidChange(_ notification: Notification) {
-        // Change depending on what is selected
-        
+        // change depending on what is selected
         let selectedName = files.files[files.browser.selectedRow]
         Configuration.writeFile(name: selectedName, content: textView.string)
+        
+        // update paragraph style
+        textView.textStorage?.addAttribute(.paragraphStyle, value: getDefaultParagraphStyle(), range: NSMakeRange(0, textView.textStorage!.length))
     }
     
     func disable() {
@@ -44,8 +45,31 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         textView.isSelectable = true
     }
     
-    func update(withFile file: String) {
+    func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
+        textStorage.addAttributes([.paragraphStyle : getDefaultParagraphStyle()], range: editedRange)
+    }
+    
+    func getDefaultParagraphStyle () -> NSParagraphStyle {
+        var lineSpacing: CGFloat
         
+        switch prefs.font {
+        case "System":
+            lineSpacing = 4
+        case "Serif":
+            lineSpacing = 0
+        case "Mono":
+            lineSpacing = 2.0
+        default:
+            lineSpacing = 2.0
+        }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+        
+        return paragraphStyle
+    }
+    
+    func update(withFile file: String) {
         // font size
         var fontSize: CGFloat = 14
         switch prefs.size {
@@ -61,28 +85,21 @@ class EditorViewController: NSViewController, NSTextViewDelegate {
         
         // font family
         var font: NSFont
-        var lineSpacing: CGFloat
         switch prefs.font {
             case "System":
                 font = NSFont.systemFont(ofSize: fontSize)
-                lineSpacing = 2
             case "Serif":
                 font = NSFont(name: "Spectral Regular", size: fontSize*1.2)!
-                lineSpacing = -4
             case "Mono":
                 font = NSFont(name: "Space Mono", size: fontSize)!
-                lineSpacing = 2.0
             default:
                 font = NSFont.systemFont(ofSize: fontSize)
-                lineSpacing = 2
         }
         
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = lineSpacing
-        
+        textView.textStorage?.addAttribute(.paragraphStyle, value: getDefaultParagraphStyle(), range: NSMakeRange(0, textView.textStorage!.length))
+        textView.defaultParagraphStyle = getDefaultParagraphStyle()
         textView.string = file
         textView.font = font
-        textView.defaultParagraphStyle = paragraphStyle
         
         enable()
     }
