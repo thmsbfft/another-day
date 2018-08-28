@@ -1,3 +1,6 @@
+<p align='center'>
+  <img src='screenshot.png' width='480'/>
+</p>
 
 #### Another Day 🌸
 
@@ -6,10 +9,6 @@
 - `v1.3.0` • `MacOS 10.13+`
 - [dat://anotherday.site/](dat://anotherday.site/)
 - [https://anotherday.site/](https://anotherday.site/)
-
-<p align='center'>
-  <img src='screenshot.png' width='480'/>
-</p>
 
 ---
 
