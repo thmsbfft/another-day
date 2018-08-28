@@ -1,5 +1,5 @@
 <p align='center'>
-  <img src='screenshot.png' width='480'/>
+  <img src='screenshot.png' width='482'/>
 </p>
 
 #### Another Day
