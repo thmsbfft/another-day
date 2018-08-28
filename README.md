@@ -8,7 +8,7 @@
 - [https://anotherday.site/](https://anotherday.site/)
 
 <p align='center'>
-  <img src=‘./screenshot.png' width=‘480’/>
+  <img src=‘screenshot.png' width=‘480’/>
 </p>
 
 ---
