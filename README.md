@@ -6,7 +6,7 @@
 
 ---
 
-- `v1.3.0` • `MacOS 10.13+`
+- `v1.4.0` • `MacOS 10.13+`
 - [dat://anotherday.site/](dat://anotherday.site/)
 - [https://anotherday.site/](https://anotherday.site/)
 
