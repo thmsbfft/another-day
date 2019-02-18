@@ -20,6 +20,7 @@ class TodayViewController: NSSplitViewController {
         super.viewDidLoad()
         
         left.maximumThickness = 150
+//        super.splitView.setValue(NSColor.textBackgroundColor, forKey: "dividerColor")
         
         if let files = left.viewController as? FilesViewController,
            let editor = right.viewController as? EditorViewController {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092AA30B221B4C9400B4C74E /* sidebarHighlightControlColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092AA30A221B4C9400B4C74E /* sidebarHighlightControlColor.xcassets */; };
 		0946B051211B58FD00E1F5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946B050211B58FD00E1F5EA /* AppDelegate.swift */; };
 		0946B055211B58FE00E1F5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0946B054211B58FE00E1F5EA /* Assets.xcassets */; };
 		0946B058211B58FE00E1F5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0946B056211B58FE00E1F5EA /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092AA30A221B4C9400B4C74E /* sidebarHighlightControlColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = sidebarHighlightControlColor.xcassets; sourceTree = "<group>"; };
 		0946B04D211B58FD00E1F5EA /* Another Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Another Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0946B050211B58FD00E1F5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0946B054211B58FE00E1F5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				095506CE211FE54E007D5A9C /* PreferencesWindowController.swift */,
 				095506D32120CCF1007D5A9C /* Cycle.swift */,
 				0958AFAD2122052B0029DC67 /* TodayWindowController.swift */,
+				092AA30A221B4C9400B4C74E /* sidebarHighlightControlColor.xcassets */,
 			);
 			name = "Another Day";
 			path = AnotherDay;
@@ -134,6 +137,7 @@
 				TargetAttributes = {
 					0946B04C211B58FD00E1F5EA = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -163,6 +167,7 @@
 				0946B055211B58FE00E1F5EA /* Assets.xcassets in Resources */,
 				0958AFBE21249C9E0029DC67 /* Spectral-Regular.ttf in Resources */,
 				0958AFBC212491910029DC67 /* SpaceMono-Regular.ttf in Resources */,
+				092AA30B221B4C9400B4C74E /* sidebarHighlightControlColor.xcassets in Resources */,
 				0946B058211B58FE00E1F5EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +326,7 @@
 				CODE_SIGN_ENTITLEMENTS = AnotherDay/AnotherDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GW7J3YMX89;
 				INFOPLIST_FILE = "$(SRCROOT)/AnotherDay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,7 +335,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.anotherday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -340,6 +346,7 @@
 				CODE_SIGN_ENTITLEMENTS = AnotherDay/AnotherDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GW7J3YMX89;
 				INFOPLIST_FILE = "$(SRCROOT)/AnotherDay/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,7 +355,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thmsbfft.anotherday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

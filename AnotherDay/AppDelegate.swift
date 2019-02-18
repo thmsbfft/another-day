@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if !flag {
             if !(mainWindowController != nil) {
-                mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "MainWindowController")) as! TodayWindowController
+                mainWindowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "MainWindowController") as! TodayWindowController
                 mainWindowController!.showWindow(sender)
             }
             
@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func showMainWindow(_ sender: Any) {
         if !(mainWindowController != nil) {
-            mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "MainWindowController")) as! TodayWindowController
+            mainWindowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "MainWindowController") as! TodayWindowController
             mainWindowController!.showWindow(sender)
         }
         
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func showPreferences(_ sender: Any) {
         if !(preferencesController != nil) {
-            preferencesController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PreferencesController")) as! PreferencesWindowController
+            preferencesController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "PreferencesController") as! PreferencesWindowController
             preferencesController!.showWindow(sender)
         }
         

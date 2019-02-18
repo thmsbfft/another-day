@@ -113,7 +113,7 @@ class CustomRowView: NSTableRowView {
     }
     
     override func drawSelection(in dirtyRect: NSRect) {
-        NSColor.black.setFill()
+        NSColor(named: NSColor.Name("sidebarHighlightControlColor"))?.setFill()
         dirtyRect.fill()
     }
     
